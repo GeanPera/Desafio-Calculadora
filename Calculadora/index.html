@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Desafio Calculadora</title>
+        <style>
+            
+            * {
+                margin: 0px;
+                border: 0px;
+                padding: 0px;
+                font-size: 35px;
+                font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+            }
+            body{
+                margin: 20px;
+            }
+            #idDivTela{     
+                border: 1px solid;
+                width: 400px;
+                height: 100px;
+                
+            }
+            #idDivTeclado{
+                margin-top: 5px;
+                height: 350px;
+                width: 400px;
+            }
+            #idTela{
+                border: none;
+                width: 100%;
+                height: 100%;
+            }
+            .botao{
+                width: 25%;
+                border: 1px solid;
+                margin: 2px;
+                border-collapse: collapse;
+                border-radius: 50px;
+                text-align: center;
+                
+            }
+            p{
+                margin: 12.5px;
+            }
+            .botaoNum{
+                background-color: rgb(204, 204, 204)
+            }
+            .botaoIgual{
+                background-color: rgb(169, 231, 255)
+            }
+            #idLinha1{
+                display: flex;                
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha2{
+                display: flex;               
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha3{
+                display: flex;
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha4{
+                display: flex;
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha5{
+                display: flex;
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha6{
+                display: flex;
+                height: 20%;
+                width: 100%;
+            }
+            #idLinha7{
+                display: flex;
+                height: 20%;
+                width: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="idDivTela">
+            <!-- Div tela -->
+            <input type="text" name="nmTela" id="idTela" size= "10" maxlength="20" placeholder="0">
+        </div>
+        <div id="idDivTeclado">
+            <!-- Div Teclado -->
+            <div id="idLinha1">
+                
+                <div class="botao" id="idArmazenarMemoria">
+                    <p>MS</p>
+                </div>
+                <div class="botao" id="idCE">
+                    <p>CE</p>            
+                </div>
+                <div class="botao" id="idC">
+                    <p>C</p>           
+                </div>
+                <div class="botao" id="idLimparMenoria">
+                    <p>MC</p>            
+                </div>                   
+            </div>
+            <div id="idLinha2">
+                
+                <div class="botao" id="idAdicaoMemoria">
+                    <p>M+</p>       
+                </div>
+                <div class="botao" id="idSubtracaoMemoria">
+                    <p>M-</p>                
+                </div>
+                <div class="botao" id="idChamarMemoria">
+                    <p>MR</p>            
+                </div>
+                <div class="botao" id="idPorcentagem">
+                    <p>%</p>
+                </div> 
+              
+            </div>
+            <div id="idLinha3">
+                <div class="botao" id="idInverso">
+                    <p>1/x</p>
+                </div> 
+                <div class="botao" id="idExponenciacao">
+                    <p>^</p>
+                </div> 
+
+                <div class="botao" id="idRaiz">
+                    <p>√</p>                 
+                </div>  
+                <div class="botao" id="idDivisao">
+                    <p>÷</p>         
+                </div> 
+                                                      
+            </div>
+            <div id="idLinha4">
+                <div class="botao botaoNum" id="idNum07">
+                    <p>7</p>                                                    
+                </div>                                                    
+                <div class="botao botaoNum" id="idNum08">
+                    <p>8</p>                                 
+                </div>
+                <div class="botao botaoNum" id="idNum09">
+                    <p>9</p>                                                    
+                </div>
+                <div class="botao" id="idMultplicacao">
+                    <p>X</p>         
+                </div> 
+
+            </div>
+            <div id="idLinha5">
+                <div class="botao botaoNum" id="idNum04">
+                    <p>4</p>         
+                </div>
+                <div class="botao botaoNum" id="idNum05">
+                    <p>5</p>                                          
+                </div>
+                <div class="botao botaoNum" id="idNum06">
+                    <p>6</p>     
+                </div>   
+                <div class="botao" id="idSubtracao">
+                    <p>-</p>        
+                </div>  
+                                      
+            </div>
+            <div id="idLinha6">
+                <div class="botao botaoNum" id="idNum01">
+                    <p>1</p>     
+                </div>
+                <div class="botao botaoNum" id="idNum02">
+                    <p>2</p>    
+                </div>
+                <div class="botao botaoNum" id="idNum03">
+                    <p>3</p>        
+                </div> 
+                <div class="botao" id="idAdicao">
+                    <p>+</p>       
+                </div>      
+                              
+            </div>
+            <div id="idLinha7">
+                <div class="botao" id="idNegativo">
+                    <p>+/-</p>           
+                </div>
+                <div class="botao botaoNum" id="idNum00">
+                    <p>0</p>       
+                </div>
+                <div class="botao" id="idPonto">
+                    <p>.</p>
+                </div>
+                <div class="botao botaoIgual" id="idIgual">
+                    <p>=</p>        
+                </div>
+ 
+            </div>
+        </div>
+        <script>
+            // Capturando Botões Numéricos
+            var bt00 = document.getElementById("idNum00")
+            var bt01 = document.getElementById("idNum01")
+            var bt02 = document.getElementById("idNum02")
+            var bt03 = document.getElementById("idNum03")
+            var bt04 = document.getElementById("idNum04")
+            var bt05 = document.getElementById("idNum05")
+            var bt06 = document.getElementById("idNum06")
+            var bt07 = document.getElementById("idNum07")
+            var bt08 = document.getElementById("idNum08")
+            var bt09 = document.getElementById("idNum09")
+            // Capturando Botões Memória
+            var btArmazenarMemoria = document.getElementById("idArmazenarMemoria")
+            var btAdicaoMemoria = document.getElementById("idAdicaoMemoria")
+            var btSubtracaoMemoria = document.getElementById("idSubtracaoMemoria")
+            var btLimparMenoria = document.getElementById("idLimparMenoria")
+            var btChamarMemoria = document.getElementById("idChamarMemoria")
+            // Capturando Botões Operadores Aritmeticos
+            var btDivisao = document.getElementById("idDivisao")
+            var btMultip = document.getElementById("idMultplicacao")
+            var btSubtr = document.getElementById("idSubtracao")
+            var btAdicao = document.getElementById("idAdicao")
+            var btRaiz = document.getElementById("idRaiz")
+            var btExpoente = document.getElementById("idExponenciacao")
+            var btPorcentagem = document.getElementById("idPorcentagem")
+            // Capturando Outros Botões 
+            var btIgual = document.getElementById("idIgual")
+            var btPonto = document.getElementById("idPonto")
+            var btInverso = document.getElementById("idInverso")
+            var btNegativo = document.getElementById("idNegativo")
+            var btCE = document.getElementById("idCE")
+            var btC = document.getElementById("idC")
+
+            // Array para armazenar os números
+            var numDigitado = []
+            var operadorArit = []
+            var memoria = []
+
+            // Numero na Tela
+            var inputNum = document.getElementById("idTela")
+            
+            // Function dos Botões Numéricos
+            bt00.onclick = function () {
+            inputNum.value = inputNum.value + "0"
+            }
+            bt01.onclick = function () {
+                inputNum.value = inputNum.value + "1"
+            }
+            bt02.onclick = function () {
+                inputNum.value = inputNum.value + "2"
+            }
+            bt03.onclick = function () {
+                inputNum.value = inputNum.value + "3"
+            }
+            bt04.onclick = function () {
+                inputNum.value = inputNum.value + "4"
+            }
+            bt05.onclick = function () {
+                inputNum.value = inputNum.value + "5"
+            }
+            bt06.onclick = function () {
+                inputNum.value = inputNum.value + "6"
+            }
+            bt07.onclick = function () {
+                inputNum.value = inputNum.value + "7"
+            }
+            bt08.onclick = function () {
+                inputNum.value = inputNum.value + "8"
+            }
+            bt09.onclick = function () {
+                inputNum.value = inputNum.value + "9"
+            }
+            // Function dos Botões da Memória
+            btArmazenarMemoria.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                memoria = []
+                memoria.push(parseFloat(inputNum.value))
+                inputNum.value = ""
+                console.log("Memoria = " + memoria)
+            }
+            btAdicaoMemoria.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                memoria.push(parseFloat(inputNum.value))
+                let aux = memoria[0] + memoria[1]
+                memoria.unshift(aux)
+                memoria.pop()
+                memoria.pop()
+                console.log("Memoria = " + memoria)
+            }
+            btSubtracaoMemoria.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                memoria.push(parseFloat(inputNum.value))
+                let aux = memoria[0] - memoria[1]
+                memoria.unshift(aux)
+                memoria.pop()
+                memoria.pop()
+                console.log("Memoria = " + memoria)
+            }
+            btLimparMenoria.onclick = function () {
+                memoria = []
+            }
+            btChamarMemoria.onclick = function () {
+                if (memoria.length == 0) {
+                    inputNum.value = 0
+                } else {
+                    inputNum.value = memoria[0]
+                }
+                
+            }
+            // Function dos Botões dos Operadores Aritméticos
+            btAdicao.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                operadorArit.push("+")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            btDivisao.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                operadorArit.push("/")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            btExpoente.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                operadorArit.push("**")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            
+            btMultip.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                operadorArit.push("*")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            btPorcentagem.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value / 100))
+                operadorArit.push("%")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            btRaiz.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                inputNum.value = (parseFloat(Math.sqrt(inputNum.value)))
+            }
+            btSubtr.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                operadorArit.push("-")
+                inputNum.value = ""
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            // Function dos Outros Botões
+            btInverso.onclick = function () {
+                if (inputNum.value == "" || inputNum.value == 0) {
+                    inputNum.value = 0
+                } else {
+                    inputNum.value = (parseFloat( 1 / inputNum.value))
+                }
+            }
+            btPonto.onclick = function () {
+                inputNum.value = inputNum.value + "."
+            }
+            btCE.onclick = function () {
+                inputNum.value = ""
+            }
+            btC.onclick = function () {
+                numDigitado = []
+                operadorArit = []
+                console.log("Num Digitado = " + numDigitado)
+                console.log("Operadores = " + operadorArit)
+            }
+            btNegativo.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = ""
+                }
+                inputNum.value = (inputNum.value * -1)
+            }
+            btIgual.onclick = function () {
+                if (inputNum.value == "") {
+                    inputNum.value = 0
+                }
+                numDigitado.push(parseFloat(inputNum.value))
+                inputNum.value = ""
+                
+                for (var i = 0; i < operadorArit.length; i++) {
+                    if (operadorArit[i+1] == "%") {
+                        if (operadorArit[i] == "+" ) {
+                            numDigitado[1] = (numDigitado[0] * numDigitado[1])
+                        }
+                        if (operadorArit[i] == "-" ) {
+                            numDigitado[1] = (numDigitado[0] * numDigitado[1])
+                        }
+                    } 
+                    if (operadorArit[i] == "+") {
+                        
+                        let result = numDigitado[0] + numDigitado[1]
+                        numDigitado.shift()
+                        numDigitado.shift()
+                        numDigitado.unshift(result)
+                        console.log("Num Digitado = " + numDigitado)
+                    } 
+                    if (operadorArit[i] == "-") {
+                        
+                        let result = numDigitado[0] - numDigitado[1]
+                        numDigitado.shift()
+                        numDigitado.shift()
+                        numDigitado.unshift(result)
+                        console.log("Num Digitado = " + numDigitado)
+                    } 
+                    if (operadorArit[i] == "*") {
+                      
+                        let result = numDigitado[0] * numDigitado[1]
+                        numDigitado.shift()
+                        numDigitado.shift()
+                        numDigitado.unshift(result)
+                        console.log("Num Digitado = " + numDigitado)
+                    } 
+                    if (operadorArit[i] == "/") {
+                  
+                        let result = numDigitado[0] / numDigitado[1]
+                        numDigitado.shift()
+                        numDigitado.shift()
+                        numDigitado.unshift(result)
+                        console.log("Num Digitado = " + numDigitado)
+                    } 
+                    if (operadorArit[i] == "**") {
+                  
+                        let result = numDigitado[0] ** numDigitado[1]
+                        numDigitado.shift()
+                        numDigitado.shift()
+                        numDigitado.unshift(result)
+                        console.log("Num Digitado = " + numDigitado)
+                    } 
+                    
+                    
+                }
+                
+                inputNum.value = numDigitado[0]
+                numDigitado = []
+                operadorArit = []
+                console.log("Operadores = " + operadorArit)
+                if (inputNum.value == "Infinity" || inputNum.value == "NaN") {
+                    inputNum.value = 0
+                }
+            }
+            
+        
+        </script>
+    </body>
+</html>
